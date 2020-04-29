@@ -10,4 +10,9 @@ export default function(app) {
         .get(events.get)
         .put(events.update)
         .delete(events.delete);
+    
+    app.get('/docker-test', function(req, res) {
+        res.send('Container works');
+      });
+      
 }
