@@ -8,7 +8,8 @@ var app = express();
 var port = process.env.port || 3000;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://root:mongodb_ynov@localhost:27017/labynov?authSource=admin', {useNewUrlParser: true, useUnifiedTopology: true});
+
+mongoose.connect('mongodb://root:mongodb@mongodb:27017/test?authSource=admin', {useNewUrlParser: true, useUnifiedTopology: true});
 
 var db = mongoose.connection; 
 db.on('error', console.error.bind(console, 'Erreur lors de la connexion')); 
